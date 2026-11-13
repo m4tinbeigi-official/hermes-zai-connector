@@ -101,3 +101,7 @@ zai/glm-5.2  # highest quality, requires plan
 ## License
 
 MIT
+## Extended Resources
+- [Installation Guide with Affiliate Signup](INSTALL_GUIDE.md) — Quick start with free/premium options  
+- [Full Model Status](MODEL_STATUS.md) — All tested models and compatibility  
+- [Affiliate Disclosure](AFFILIATE_DISCLOSURE.md) — How this project supports development
