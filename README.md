@@ -57,13 +57,38 @@ You may enter multiple API keys from legitimately owned/authorized accounts. Ins
 
 No fixed universal limit exists in this project. Maximum usable keys depends on Z.ai's account, plan, API-key, rate, and abuse policies. Check Z.ai dashboard and Terms before adding more.
 
-## Models
+## Model Status
 
-- `glm-4.7-flash`: default
-- `glm-4.5-flash`: fallback
-- `glm-5.2`: available when account has required plan or balance
+### ✅ Working Models (Free Tier)
+- `zai/glm-4.7-flash` — recommended fallback, requires high max_tokens
+- `zai/glm-4.5-flash` — free tier, tested working
+- `zai/glm-4-flash` — free tier, basic compatibility
 
-Model availability and quota come from Z.ai. A valid key without an eligible resource package may return error `1113`.
+### ⚠️ Premium Models (Requires Coding Plan)
+- `zai/glm-5.2` — latest, best quality, needs GLM Coding Plan
+- `zai/glm-5.1`, `zai/glm-5-turbo`, `zai/glm-5` — higher tier models
+
+Upgrade to premium:
+- Visit [Z.ai Management Console](https://z.ai/manage-apikey/apikey-list)
+- Subscribe to GLM Coding Plan (~$18/month)
+- Enter premium API key to enable `glm-5.2` and other models
+
+### Error Codes
+- `1000`: Success (model available, may need proper `max_tokens`)
+- `1113`: Insufficient balance (requires paid subscription)
+
+For full model details, see [MODEL_STATUS.md](MODEL_STATUS.md).
+
+## Usage
+
+```bash
+# Use working free models
+zai/glm-4.7-flash
+zai/glm-4.5-flash
+
+# Premium models after upgrade
+zai/glm-5.2  # highest quality, requires plan
+```
 
 ## Security
 
